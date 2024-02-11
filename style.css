@@ -1,0 +1,215 @@
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            position: relative;
+        }
+
+        h1 {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .menu-btn {
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .menu-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            background-color: #95a2ff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar.active .menu-links {
+            display: flex;
+        }
+
+        .menu-links a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        main {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            font-size: 13px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .fileInputLabel {
+            display: inline-block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 1vw;
+            width: 20vw;
+            font-size: 3vw;
+        }
+
+        .fileInputLabel:hover {
+            background-color: #45a049;
+        }
+
+        .fileInput {
+            display: none;
+        }
+
+        .compressionInput {
+            max-width: 300px;
+            margin: 10px;
+            border-color: black;
+            border-radius: 4px;
+            padding: 0.9vw;
+        }
+        .widthrange{
+            margin: 10px;
+        }
+
+        .downloadButton {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            margin: 1vw;
+            border-radius: 1vw;
+            width: 25vw;
+            font-size: 3vw;
+        }
+
+        .downloadButton:hover {
+            background-color: #23527c;
+        }      
+
+        #originalImageContainer,
+        #compressedImageContainer {
+            padding: 10px;
+            box-sizing: border-box;
+            flex: 1;
+            text-align: center;
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        #compressedImageContainer{
+        display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .fileSize {
+            margin: 10px;
+        }
+
+        #fileSizeOriginal,
+        #fileSizeCompressed {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .loadingSpinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+#htusection{
+            font-size: 13px;
+            background-color: #d5d5d5;
+            color: #000000;
+            padding: 15px;
+            text-align: left;
+            margin: 0;
+        }
+#faqSection {
+    text-align: left;
+    background: #95a2ff;
+    padding: 12px;
+}
+h4{
+    margin: 0;
+    padding: 3px;
+}
+.faqQuestion {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 3px;
+    margin: 0;
+}
+.faqAnswer {
+    display: none;
+    font-size: 13px;
+    padding: 3px;
+    background: #eaffea;
+}
+.faqAnswer.show {
+    display: block;
+}
+#downloadLink{
+    display: none; 
+    margin: auto;
+    text-decoration: none;
+}
+#ah1{
+    text-decoration: none; 
+    color : white;
+}

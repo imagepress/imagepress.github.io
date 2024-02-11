@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Optimize and compress your images online with Image Compressor. Reduce file sizes for faster web performance.">
+    <meta property="og:title" content="Pixel Press">
+    <meta property="og:description" content="Optimize and compress your images online with Pixel Press. Reduce file sizes for faster web performance.">
+    <meta property="og:image" content="img/android-chrome-384x384.png">
+    <meta property="og:url" content="https://imagepress.github.io">
+    <meta name="og:site_name" content="Pixel Press">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pixel Press">
+    <meta name="twitter:description" content="Optimize and compress your images online with Image Compressor. Reduce file sizes for faster web performance.">
+    <meta name="twitter:image" content="img/android-chrome-384x384.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://imagepress.github.io">
+    <title>Image Press</title>
+    <script src="script.js">       
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+         <div class="navbar">
+      <div class="menu-btn" id="menuBtn">&#9776;</div>
+      <div class="menu-links">
+        <a href="/links/privacy policy.html" id="privacy-policy">Privacy Policy</a>
+        <a href="/links/terms of use.html" id="terms-of-use">Terms of Use</a>
+        <a href="/links/contact us.html" id="contact-us">Contact Us</a>
+      </div>
+    </div>
+        <h1><a id="ah1" href="https://imagepress.github.io">Image Press</a></h1>
+    </header>
+    <main>
+        <section>
+            <div id="originalImageContainer">
+                <div id="originalImageLoading" class="loadingSpinner"></div>
+                <h3>Original Image</h3>
+                <img id="originalImage" >
+                <div id="fileSizeOriginal" class="fileSize"></div>
+                <label for="imageInput" class="fileInputLabel">Choose File</label>
+                <input type="file" id="imageInput" accept="image/*" class="fileInput" onchange="displayOriginalPreview()">
+            </div>
+            <br><div class="widthrange">
+            <label for="maxWidthRange">Max Width:</label>
+<input type="range" id="maxWidthRange" min="100" oninput="updateMaxWidth()" style=" width: 50%; ">
+<span id="maxWidthValue">0</span>px</div> <br>
+            <label id="fileSizeLabel" for="fileSize">Target File Size (KB): </label><br>
+            <input type="number" id="fileSize" min="1" class="compressionInput" placeholder="Enter target size in KB"><br>
+            <button onclick="compressImageBySize()" class="downloadButton">Compress</button>
+            <div id="fileSize"></div>
+        </section>
+        <div id="compressedImageContainer">
+            <div id="compressedImageLoading" class="loadingSpinner"></div>
+            <h3>Compressed Image</h3>
+            <img id="compressedImage" onload="hideLoadingSpinner('compressedImageLoading')">
+            <div id="fileSizeCompressed" class="fileSize"></div>
+<a id="downloadLink" download="compressed_image.jpg" class="downloadButton">Download</a>
+        </div>
+    </main>
+    <section id="htusection">
+            <h4>Step 1: Upload Your Image</h4>
+            <p>
+                - Click on the "Choose File" button.<br>
+                - Select the image you want to compress from your device.
+            </p>
+            <h4>Step 2: Image Details and Preview</h4>
+            <p>
+                - The tool will display details about the original image, such as its size.<br>
+                - Preview the original image to assess its quality.
+            </p>
+            <h4>Step 3: Set Maximum Width (Optional)</h4>
+            <p>
+                - Use the "Max Width" slider to set the maximum width for your image.<br>
+                - This is optional and helps maintain consistent dimensions if needed.
+            </p>
+            <h4>Step 4: Specify Target File Size</h4>
+            <p>
+                - Enter your desired target file size (in kilobytes) in the input box.<br>
+                - This allows you to control the level of compression.
+            </p>
+            <h4>Step 5: Click "Compress"</h4>
+            <p>
+                - Press the "Compress" button to start the optimization process.<br>
+                - The tool will dynamically adjust the image size while preserving quality.
+            </p>
+            <h4>Step 6: Review Compressed Image</h4>
+            <p>
+                - The compressed image will appear alongside the original for comparison.<br>
+                - Assess the quality and size reduction to ensure it meets your requirements.
+            </p>
+            <h4>Step 7: Download the Optimized Image</h4>
+            <p>
+                - If satisfied, click the "Download" button.<br>
+                - The compressed image is saved to your device and ready for use.
+            </p>
+</section>
+<div id="faqSection">
+    
+    <h4>Frequently Asked Questions</h4>
+    
+    <div class="faqQuestion" onclick="toggleFaqAnswer('faq1')">Q: What is Image Press?</div>
+    <div class="faqAnswer" id="faq1">A: Image Press is a web-based tool designed to reduce the file size of images without significant loss of quality. It helps optimize images for faster loading times on websites, saving bandwidth and improving user experience.</div>
+
+    <div class="faqQuestion" onclick="toggleFaqAnswer('faq2')">Q: How does the compression process work?</div>
+    <div class="faqAnswer" id="faq2">A: The compression process involves resizing and adjusting the quality of the image. When you upload an image, the tool uses canvas and JavaScript to dynamically resize it. The quality is then adjusted to meet a target file size specified by you. The process aims to find an optimal balance between file size reduction and maintaining a visually acceptable image quality.</div>
+    
+      <div class="faqQuestion" onclick="toggleFaqAnswer('faq3')">Q: What is the size limit for images ?</div>
+    <div class="faqAnswer" id="faq3">A: The Image Press doesn't have a fixed size limit for images. However, the tool's effectiveness depends on the image's original size and content. Larger images may be more challenging to compress to extremely small sizes while preserving quality. It's recommended to experiment with different target file sizes to find the right balance for your specific images.	</div>
+    <div class="faqQuestion" onclick="toggleFaqAnswer('faq4')">Q: Which image extension can you compress ?</div>
+    <div class="faqAnswer" id="faq4">A: Image Press is designed to handle various image formats, including popular ones like JPEG, PNG, and others. It supports a wide range of image extensions commonly used on the web. You can upload images with different extensions, and the tool will attempt to compress them accordingly.</div>
+    <div class="faqQuestion" onclick="toggleFaqAnswer('faq5')">Q: Are images stored ?</div>
+    <div class="faqAnswer" id="faq5">A: No, Image Press does not store the images you upload. The compression process takes place locally in your browser without sending the images to a server. Your privacy and the security of your images are prioritized. Once the compression is complete, you can download the compressed image directly to your device without any data being stored on the server.</div>
+
+</div>
+
+     <footer>
+       
+         <b><p>Disclaimer</p></b>
+        <p>The information provided on the Image Press website is for general informational purposes only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability concerning the website or the information, products, services, or related graphics contained on the website for any purpose.Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage, including indirect or consequential loss or damage, or any loss or damage whatsoever arising from the use of this website.Through this website, you may be able to link to other websites that are not under the control of Image Press. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+        <p>&copy; 2024 Image Press</p>
+    </footer>
+</body>
+</html>
