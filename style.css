@@ -205,7 +205,7 @@ h4{
     text-decoration: none; 
     color : white;
 }
-#howto{
+      #howto{
             margin: 10px;
         }
         #divh{
@@ -235,6 +235,7 @@ h4{
             padding: 10px;
             display: block;
             margin: auto;
+            border: none;       
         }
         #imgdiv2{
             margin-left: auto;
