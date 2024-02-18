@@ -171,14 +171,6 @@ body {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-#htusection{
-            font-size: 13px;
-            background-color: #d5d5d5;
-            color: #000000;
-            padding: 15px;
-            text-align: left;
-            margin: 0;
-        }
 #faqSection {
     text-align: left;
     background: #95a2ff;
@@ -213,7 +205,10 @@ h4{
     text-decoration: none; 
     color : white;
 }
-#divh{
+#howto{
+            margin: 10px;
+        }
+        #divh{
             margin: 10px;
             border-radius: 10px;            
             max-width: 800px;
@@ -222,25 +217,24 @@ h4{
             background: white;
             box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 8px
             
-}
+        }
         #pdiv1{
             width: 100%;        
             max-width: 400px;       
             float: right;
-            text-align: left;        
+            text-align: left;
         }
         #pdiv2{
             width: 100%;        
             max-width: 400px;
             float: left;
-            text-align: left;       
+            text-align: left;
         }
         #imgh{
             width: 30%;
             padding: 10px;
             display: block;
             margin: auto;
-            border: 0;       
         }
         #imgdiv2{
             margin-left: auto;
@@ -249,4 +243,4 @@ h4{
         #imgdiv1{
             margin-right: auto;
             max-width: 400px;
-        }
+                    }
