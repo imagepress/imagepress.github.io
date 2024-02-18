@@ -221,24 +221,26 @@ h4{
             margin: 20px auto 20px auto;
             background: white;
             box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 8px
-            text-align: left;
+            
 }
         #pdiv1{
             width: 100%;        
             max-width: 400px;       
             float: right;
+            text-align: left;        
         }
         #pdiv2{
             width: 100%;        
             max-width: 400px;
             float: left;
+            text-align: left;       
         }
         #imgh{
             width: 30%;
             padding: 10px;
             display: block;
             margin: auto;
-            border: none;       
+            border: 0;       
         }
         #imgdiv2{
             margin-left: auto;
