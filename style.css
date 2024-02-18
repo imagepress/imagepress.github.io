@@ -235,7 +235,7 @@ h4{
             padding: 10px;
             display: block;
             margin: auto;
-            border: none;       
+            border: 0;       
         }
         #imgdiv2{
             margin-left: auto;
