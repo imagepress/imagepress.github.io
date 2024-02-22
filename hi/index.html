@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="UTF-8">
+    <meta name="author" content="Image Press" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="केबी में छवि का आकार कम करें, इमेज प्रेस के साथ अपनी वेबसाइट के प्रदर्शन और उपयोगकर्ता अनुभव को बढ़ाएं।  तेज़ लोडिंग और बेहतर दक्षता के लिए आज ही छवियों को संपीड़ित करें!">
+    <meta property="og:title" content="Image Press">
+    <meta property="og:description" content="केबी में छवि का आकार कम करें, इमेज प्रेस के साथ अपनी वेबसाइट के प्रदर्शन और उपयोगकर्ता अनुभव को बढ़ाएं।  तेज़ लोडिंग और बेहतर दक्षता के लिए आज ही छवियों को संपीड़ित करें!">
+    <meta property="og:image" content="https://imagepress.online/img/android-chrome-384x384.png">
+    <meta property="og:image:alt" content="Image Press" />
+    <meta property="og:url" content="https://imagepress.online/en/">
+    <meta name="og:site_name" content="Image Press">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Press">
+    <meta name="twitter:description" content="केबी में छवि का आकार कम करें, इमेज प्रेस के साथ अपनी वेबसाइट के प्रदर्शन और उपयोगकर्ता अनुभव को बढ़ाएं।  तेज़ लोडिंग और बेहतर दक्षता के लिए आज ही छवियों को संपीड़ित करें!">
+    <meta name="twitter:image" content="https://imagepress.online/img/android-chrome-384x384.png">
+    <link rel="icon" href="https://imagepress.online/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://imagepress.online/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://imagepress.online/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://imagepress.online/img/favicon-16x16.png">
+    <link rel="manifest" href="https://imagepress.online/img/site.webmanifest">
+    <link rel="mask-icon" href="https://imagepress.online/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://imagepress.online/hi/">
+    <title>इमेज प्रेस के साथ अपनी इमेज का आकार Kb में कम या कंप्रेस करें</title>
+    <link rel="stylesheet" href="http://localhost:8080/style.css">  
+</head>
+<body>
+<header class="navbar sticky">
+  <a href="index.html" class="logo">imagepress<small>.online</small></a>
+  <div class="menu-btn">
+    <div class="menu-btn__lines"></div>
+  </div>
+  <ul class="menu-items">
+    <li><a href="index.html" class="menu-item">होम पेज</a></li>
+      <li>
+      <a href="#" class="menu-item">Change Language</a>
+      <ul class="dropdown-menu">
+        <li><a href="http://localhost:8080/index.html" class="menu-item">English</a></li>
+        <li><a href="http://localhost:8080/hi/index.html" class="menu-item">हिन्दी</a></li>
+        
+        <li><a href="http://localhost:8080/zh/index.html" class="menu-item">你知道</a></li>
+          <li><a href="http://localhost:8080/fr/index.html" class="menu-item">Français</a></li>
+        <li><a href="http://localhost:8080/es/index.html" class="menu-item">Español</a></li>
+      </ul>
+    </li>               
+    <li><a href="https://imagepress.online/links/privacy policy.html" class="menu-item">प्राइवेसी पॉलिसी</a></li>
+    <li><a href="https://imagepress.online/links/terms of use.html" class="menu-item">टर्म्स ऑफ़ यूज</a></li>   
+    
+    <li><a href="https://imagepress.online/links/contact us.html" class="menu-item">संपर्क करे</a></li>
+  </ul>
+</header>
+
+<main>
+    <h1 id="heading">इमेज को KB में कंप्रेस करें</h1>
+  <div class="container">
+            <div id="originalImageContainer">
+                <div id="originalImageLoading" class="loadingSpinner"></div>
+                <h3>ओरिजनल इमेज</h3>
+                <img id="originalImage" >
+                <div id="fileSizeOriginal" class="fileSize"></div>
+                <label for="imageInput" class="fileInputLabel">फाइलें चुनें</label>
+                <input type="file" id="imageInput" accept="image/*" class="fileInput" onchange="displayOriginalPreview()">
+            </div>
+            <br><div class="widthrange">
+                <h5>स्लाइडर को कम या समायोजित करने से छवि की गुणवत्ता बनी रहती है</h5>
+            <label for="maxWidthRange">Max Width:</label>
+<input type="range" id="maxWidthRange" min="100" oninput="updateMaxWidth()">
+<span id="maxWidthValue">0</span>px</div> <br>
+            <label id="fileSizeLabel" for="fileSize">टारगेट फ़ाइल साइज(KB मे): </label><br>
+            <input type="number" id="fileSize" min="1" class="compressionInput" placeholder="Enter target size in KB"><br>
+            <button onclick="compressImageBySize()" class="downloadButton">कंप्रेस इमेज</button>
+            <div id="fileSize"></div>
+        </section>
+        <div id="compressedImageContainer">
+            <div id="compressedImageLoading" class="loadingSpinner"></div>
+            <h3>कंप्रेस्ड इमेज</h3>
+            <img id="compressedImage" onload="hideLoadingSpinner('compressedImageLoading')">
+            <div id="fileSizeCompressed" class="fileSize"></div>
+<a id="downloadLink" download="compressed_image.jpg" class="downloadButton">डाउनलोड करना</a>
+  </div>
+</main>
+<section title="इमेज प्रेस का उपयोग कैसे करे।" id="howto">
+    <div id="divh">
+    <div id="pdiv1">
+        <h4>चरण 1: अपनी छवि अपलोड करें</h4>
+        <p> &#11157; "फ़ाइल चुनें" बटन पर क्लिक करें।<br>
+            &#11157; उस छवि का चयन करें जिसे आप अपने डिवाइस से संपीड़ित करना चाहते हैं।</p>      
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/upload-icon.svg" alt="">
+        </div></div>
+        <div id="divh">
+     <div id="pdiv2">
+         <h4>चरण 2: अपनी आवश्यकता के अनुसार मैक्सविड्थ सेट करें</h4>
+            <p> &#11157; अपनी छवि के लिए अधिकतम चौड़ाई निर्धारित करने के लिए "अधिकतम चौड़ाई" स्लाइडर का उपयोग करें।<br>
+                &#11157; यह वैकल्पिक है और यदि आवश्यक हो तो सुसंगत आयाम बनाए रखने में मदद करता है।
+            </p>
+                </div>
+    <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/noun-slider-1029949.svg" alt="">
+         </div>
+         </div>
+         
+         <div id="divh">
+    <div id="pdiv1">
+        <h4>चरण 3: लक्ष्य फ़ाइल आकार निर्दिष्ट करें</h4>
+            <p>&#11157; इनपुट बॉक्स में अपना वांछित लक्ष्य फ़ाइल आकार (किलोबाइट में) दर्ज करें।<br>
+                &#11157; यह आपको संपीड़न के स्तर को नियंत्रित करने की अनुमति देता है।
+            </p>
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/input-field-svgrepo-com.svg" alt="">
+        </div></div>
+        
+         <div id="divh">
+     <div id="pdiv2">
+          <h4>चरण 4: "कंप्रेस" बटन पर क्लिक करें</h4>
+            <p>&#11157; अनुकूलन प्रक्रिया शुरू करने के लिए "संपीड़ित करें" बटन दबाएँ।<br>
+                &#11157; उपकरण गुणवत्ता बनाए रखते हुए छवि आकार को गतिशील रूप से समायोजित करेगा।
+            </p>
+                </div>
+    <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/click-here.svg" alt="">
+         </div>
+         </div>
+         
+          <div id="divh">
+    <div id="pdiv1">
+             <h4>चरण 5: अनुकूलित छवि डाउनलोड करें</h4>
+            <p>&#11157; संतुष्ट होने पर, "डाउनलोड" बटन पर क्लिक करें।<br>
+                &#11157; संपीड़ित छवि आपके डिवाइस में सहेजी गई है और उपयोग के लिए तैयार है।</p>
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/download-to-storage-icon.svg" alt="">
+        </div></div>
+</section>
+<section>
+    <div class="accordion">
+    <h4>अक्सर पूछे जाने वाले प्रश्नों</h1>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion1">
+        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>इमेज प्रेस क्या है?</label>
+        <div class="accordion-item-desc">इमेज प्रेस एक वेब-आधारित उपकरण है जिसे गुणवत्ता में महत्वपूर्ण हानि के बिना छवियों के फ़ाइल आकार को कम करने के लिए डिज़ाइन किया गया है।  यह वेबसाइटों पर तेज़ लोडिंग समय के लिए छवियों को अनुकूलित करने, बैंडविड्थ बचाने और उपयोगकर्ता अनुभव को बेहतर बनाने में मदद करता है।</div>
+    </div>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion4">
+        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>संपीड़न प्रक्रिया कैसे काम करती है?</label>
+        <div class="accordion-item-desc">संपीड़न प्रक्रिया में छवि का आकार बदलना और उसकी गुणवत्ता को समायोजित करना शामिल है।  जब आप कोई छवि अपलोड करते हैं, तो टूल उसे गतिशील रूप से आकार देने के लिए कैनवास और जावास्क्रिप्ट का उपयोग करता है।  फिर गुणवत्ता को आपके द्वारा निर्दिष्ट लक्ष्य फ़ाइल आकार को पूरा करने के लिए समायोजित किया जाता है।  इस प्रक्रिया का उद्देश्य फ़ाइल आकार में कमी और दृष्टिगत रूप से स्वीकार्य छवि गुणवत्ता बनाए रखने के बीच एक इष्टतम संतुलन खोजना है।</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion2">
+        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>छवियों के लिए आकार सीमा क्या है?</label>
+        <div class="accordion-item-desc">इमेज प्रेस में छवियों के लिए कोई निश्चित आकार सीमा नहीं है।  हालाँकि, टूल की प्रभावशीलता छवि के मूल आकार और सामग्री पर निर्भर करती है।  गुणवत्ता बनाए रखते हुए बड़ी छवियों को अत्यंत छोटे आकार में संपीड़ित करना अधिक चुनौतीपूर्ण हो सकता है।  आपकी विशिष्ट छवियों के लिए सही संतुलन खोजने के लिए विभिन्न लक्ष्य फ़ाइल आकारों के साथ प्रयोग करने की अनुशंसा की जाती है।</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion3">
+        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>आप किस इमेज एक्सटेंशन को कंप्रेस कर सकते हैं?</label>
+        <div class="accordion-item-desc">इमेज प्रेस को विभिन्न इमेज प्रारूपों को संभालने के लिए डिज़ाइन किया गया है, जिनमें JPG, PNG और अन्य जैसे लोकप्रिय प्रारूप शामिल हैं।  यह आमतौर पर वेब पर उपयोग किए जाने वाले इमेज एक्सटेंशन की एक विस्तृत श्रृंखला का समर्थन करता है।  आप विभिन्न एक्सटेंशन के साथ इमेज अपलोड कर सकते हैं, और टूल उन्हें तदनुसार कंप्रेस करने का प्रयास करेगा।</div>
+    </div>
+
+    
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion5">
+        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>क्या इमेजेस संग्रहीत होती हैं?</label>
+        <div class="accordion-item-desc">नहीं, इमेज प्रेस आपके द्वारा अपलोड की गई इमेजो को संग्रहीत नहीं करता है। इमेजो को सर्वर पर भेजे बिना कंप्रेशन प्रक्रिया आपके ब्राउज़र में स्थानीय रूप से होती है।  आपकी गोपनीयता और आपकी इमेजो की सुरक्षा को प्राथमिकता दी जाती है।  एक बार कंप्रेशन पूरा हो जाने पर, आप सर्वर पर कोई डेटा संग्रहीत किए बिना कंप्रेस्ड इमेज को सीधे अपने डिवाइस पर डाउनलोड कर सकते हैं।</div>
+    </div>
+
+</div>
+</section>
+<footer class="footer">
+  <div class="copyright">
+      <a href="https://imagepress.online/hi/index.html"><h3  id="logo">imagepress<small>.online</small></h3></a>
+    
+    <p><b>डिस्क्लेमर:</b> इमेज प्रेस वेबसाइट पर दी गई जानकारी केवल सामान्य सूचनात्मक उद्देश्यों के लिए है।  हालाँकि हम जानकारी को अद्यतन और सटीक रखने का प्रयास करते हैं, हम वेबसाइट या जानकारी, उत्पादों, सेवाओं के संबंध में पूर्णता, सटीकता, विश्वसनीयता, उपयुक्तता या उपलब्धता के बारे में किसी भी प्रकार का कोई व्यक्त या निहित प्रतिनिधित्व या वारंटी नहीं देते हैं।  या किसी भी उद्देश्य के लिए वेबसाइट पर मौजूद संबंधित ग्राफिक्स। ऐसी जानकारी पर आपके द्वारा की गई कोई भी निर्भरता पूरी तरह से आपके अपने जोखिम पर है।  किसी भी स्थिति में हम किसी भी हानि या क्षति के लिए उत्तरदायी नहीं होंगे, जिसमें अप्रत्यक्ष या परिणामी हानि या क्षति, या इस वेबसाइट के उपयोग से उत्पन्न होने वाली कोई भी हानि या क्षति शामिल है। इस वेबसाइट के माध्यम से, आप अन्य वेबसाइटों से लिंक करने में सक्षम हो सकते हैं  इमेज प्रेस के नियंत्रण में नहीं।  उन साइटों की प्रकृति, सामग्री और उपलब्धता पर हमारा कोई नियंत्रण नहीं है।  किसी भी लिंक को शामिल करने का मतलब जरूरी नहीं है कि कोई सिफारिश की जाए या उनमें व्यक्त विचारों का समर्थन किया जाए।</p>
+        <p>&copy; 2024 <a href="https://imagepress.online/hi/">Image Press</a>. All rights reserved.</p>
+  </div>
+</footer>
+<div class="overlay"></div>
+<script  src="http://localhost:8080/script.js"></script>
+</body>
+</html>
