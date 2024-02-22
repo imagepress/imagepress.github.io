@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="zh" >
 <head>
    <meta charset="UTF-8">
     <meta name="author" content="Image Press" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta name="description" content="使用 Image Press 减少图像大小（以 kb 为单位），增强网站性能和用户体验。 立即压缩图像以加快加载速度并提高效率！">
     <meta property="og:title" content="Image Press">
-    <meta property="og:description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta property="og:description" content="使用 Image Press 减少图像大小（以 kb 为单位），增强网站性能和用户体验。 立即压缩图像以加快加载速度并提高效率！">
     <meta property="og:image" content="https://imagepress.online/img/android-chrome-384x384.png">
     <meta property="og:image:alt" content="Image Press" />
-    <meta property="og:url" content="https://imagepress.online/en/">
+    <meta property="og:url" content="https://imagepress.online/zh/">
     <meta name="og:site_name" content="Image Press">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Image Press">
-    <meta name="twitter:description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta name="twitter:description" content="使用 Image Press 减少图像大小（以 kb 为单位），增强网站性能和用户体验。 立即压缩图像以加快加载速度并提高效率！">
     <meta name="twitter:image" content="https://imagepress.online/img/android-chrome-384x384.png">
     <link rel="icon" href="https://imagepress.online/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="https://imagepress.online/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://imagepress.online/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://imagepress.online/img/favicon-16x16.png">
     <link rel="manifest" href="https://imagepress.online/img/site.webmanifest">
     <link rel="mask-icon" href="https://imagepress.online/img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://imagepress.online/">
-    <title>Reduce or Compress your images size in kb with Image Press</title>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="canonical" href="https://imagepress.online/zh/">
+    <title>使用 Image Press 减少或压缩图像大小（以 kb 为单位）</title>
+    <link rel="stylesheet" href="http://localhost:8080/style.css">  
 </head>
 <body>
 <header class="navbar sticky">
-  <a href="https://imagepress.online/index.html" class="logo">imagepress<small>.online</small></a>
+  <a href="index.html" class="logo">imagepress<small>.online</small></a>
   <div class="menu-btn">
     <div class="menu-btn__lines"></div>
   </div>
@@ -54,48 +54,48 @@
 </header>
 
 <main>
-    <h1 id="heading">Compress Image In KB</h1>
+    <h1 id="heading">以 KB 为单位压缩图像</h1>
   <div class="container">
             <div id="originalImageContainer">
                 <div id="originalImageLoading" class="loadingSpinner"></div>
-                <h3>Original Image</h3>
+                <h3>原始图像</h3>
                 <img id="originalImage" >
                 <div id="fileSizeOriginal" class="fileSize"></div>
-                <label for="imageInput" class="fileInputLabel">Choose File</label>
+                <label for="imageInput" class="fileInputLabel">选择文件</label>
                 <input type="file" id="imageInput" accept="image/*" class="fileInput" onchange="displayOriginalPreview()">
             </div>
             <br><div class="widthrange">
-                <h5>Reduce or adjust slider keep the quality of image</h5>
+                <h5>减少或调整滑块保持图像质量</h5>
             <label for="maxWidthRange">Max Width:</label>
 <input type="range" id="maxWidthRange" min="100" oninput="updateMaxWidth()">
 <span id="maxWidthValue">0</span>px</div> <br>
-            <label id="fileSizeLabel" for="fileSize">Target File Size (KB): </label><br>
-            <input type="number" id="fileSize" min="1" class="compressionInput" placeholder="Enter target size in KB"><br>
-            <button onclick="compressImageBySize()" class="downloadButton">Compress</button>
+            <label id="fileSizeLabel" for="fileSize">目标文件大小（KB）：</label><br>
+            <input type="number" id="fileSize" min="1" class="compressionInput" placeholder="输入目标大小（以 KB 为单位）"><br>
+            <button onclick="compressImageBySize()" class="downloadButton">压缩</button>
             <div id="fileSize"></div>
         </section>
         <div id="compressedImageContainer">
             <div id="compressedImageLoading" class="loadingSpinner"></div>
-            <h3>Compressed Image</h3>
+            <h3>压缩图像</h3>
             <img id="compressedImage" onload="hideLoadingSpinner('compressedImageLoading')">
             <div id="fileSizeCompressed" class="fileSize"></div>
-<a id="downloadLink" download="compressed_image.jpg" class="downloadButton">Download</a>
+<a id="downloadLink" download="compressed_image.jpg" class="downloadButton">下载</a>
   </div>
 </main>
 <section title="how to use Image Press" id="howto">
     <div id="divh">
     <div id="pdiv1">
-        <h4>Step 1: Upload Your Image</h4>
-        <p> &#11157; Click on the "Choose File" button.<br>
-            &#11157; Select the image you want to compress from your device. </p>      
+        <h4>第 1 步：上传您的图片</h4>
+        <p> &#11157; 单击“选择文件”按钮。<br>
+            &#11157; 从设备中选择要压缩的图像。</p>      
         </div>
        <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/upload-icon.svg" alt="">
         </div></div>
         <div id="divh">
      <div id="pdiv2">
-         <h4>Step 2:Set MaxWidth as per your need </h4>
-            <p> &#11157; Use the "Max Width" slider to set the maximum width for your image.<br>
-                &#11157; This is optional and helps maintain consistent dimensions if needed.
+         <h4>步骤2：根据需要设置MaxWidth </h4>
+            <p> &#11157; 使用“最大宽度”滑块设置图像的最大宽度。<br>
+                &#11157; 这是可选的，并有助于在需要时保持一致的尺寸。
             </p>
                 </div>
     <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/noun-slider-1029949.svg" alt="">
@@ -104,9 +104,9 @@
          
          <div id="divh">
     <div id="pdiv1">
-        <h4>Step 3: Specify Target File Size</h4>
-            <p>&#11157; Enter your desired target file size (in kilobytes) in the input box.<br>
-                &#11157; This allows you to control the level of compression.
+        <h4>步骤 3：指定目标文件大小</h4>
+            <p>&#11157; 在输入框中输入所需的目标文件大小（以千字节为单位）。<br>
+                &#11157; 这允许您控制压缩级别。
             </p>
         </div>
        <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/input-field-svgrepo-com.svg" alt="">
@@ -114,9 +114,9 @@
         
          <div id="divh">
      <div id="pdiv2">
-          <h4>Step 4: Click "Compress" Button</h4>
-            <p>&#11157; Press the "Compress" button to start the optimization process.<br>
-                &#11157; The tool will dynamically adjust the image size while preserving quality.
+          <h4>第四步：点击“压缩”按钮</h4>
+            <p>&#11157; 按“压缩”按钮开始优化过程。<br>
+                &#11157; 该工具将动态调整图像尺寸，同时保持质量。
             </p>
                 </div>
     <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/click-here.svg" alt="">
@@ -125,58 +125,58 @@
          
           <div id="divh">
     <div id="pdiv1">
-             <h4>Step 5: Download the Optimized Image</h4>
-            <p>&#11157; If satisfied, click the "Download" button.<br>
-                &#11157; The compressed image is saved to your device and ready for use. </p>
+             <h4>第5步：下载优化后的镜像</h4>
+            <p>&#11157; 如果满意，请单击“下载”按钮。<br>
+                &#11157; 压缩图像将保存到您的设备并可供使用。</p>
         </div>
        <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/download-to-storage-icon.svg" alt="">
         </div></div>
 </section>
 <section>
     <div class="accordion">
-    <h4>Frequently Asked Questions</h1>
+    <h4>经常问的问题</h1>
     <div class="accordion-item">
         <input type="checkbox" id="accordion1">
-        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>What is Image Press?</label>
-        <div class="accordion-item-desc">Image Press is a web-based tool designed to reduce the file size of images without significant loss of quality. It helps optimize images for faster loading times on websites, saving bandwidth and improving user experience.</div>
+        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>什么是图像出版社？</label>
+        <div class="accordion-item-desc">Image Press 是一款基于网络的工具，旨在减小图像文件大小，而不会显着降低质量。 它有助于优化图像以加快网站加载速度，节省带宽并改善用户体验。</div>
     </div>
     <div class="accordion-item">
         <input type="checkbox" id="accordion4">
-        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>How does the compression process work?</label>
-        <div class="accordion-item-desc">The compression process involves resizing and adjusting the quality of the image. When you upload an image, the tool uses canvas and JavaScript to dynamically resize it. The quality is then adjusted to meet a target file size specified by you. The process aims to find an optimal balance between file size reduction and maintaining a visually acceptable image quality.</div>
+        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>压缩过程如何进行？</label>
+        <div class="accordion-item-desc">压缩过程涉及调整图像大小和调整图像质量。 当您上传图像时，该工具使用画布和 JavaScript 动态调整图像大小。 然后调整质量以满足您指定的目标文件大小。 该过程旨在在减小文件大小和保持视觉上可接受的图像质量之间找到最佳平衡。</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion2">
-        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>What is the size limit for images ?</label>
-        <div class="accordion-item-desc">The Image Press doesn't have a fixed size limit for images. However, the tool's effectiveness depends on the image's original size and content. Larger images may be more challenging to compress to extremely small sizes while preserving quality. It's recommended to experiment with different target file sizes to find the right balance for your specific images.</div>
+        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>图像的大小限制是多少？</label>
+        <div class="accordion-item-desc">Image Press 对图像没有固定的尺寸限制。 但是，该工具的有效性取决于图像的原始大小和内容。 较大的图像在保持质量的同时压缩到极小的尺寸可能更具挑战性。 建议尝试不同的目标文件大小，以便为您的特定图像找到适当的平衡。</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion3">
-        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>Which image extension can you compress ?</label>
-        <div class="accordion-item-desc">Image Press is designed to handle various image formats, including popular ones like JPEG, PNG, and others. It supports a wide range of image extensions commonly used on the web. You can upload images with different extensions, and the tool will attempt to compress them accordingly.</div>
+        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>您可以压缩哪个图像扩展名？</label>
+        <div class="accordion-item-desc">Image Press 旨在处理各种图像格式，包括 JPEG、PNG 等流行格式。 它支持网络上常用的各种图像扩展。 您可以上传具有不同扩展名的图像，该工具将尝试相应地压缩它们。</div>
     </div>
 
     
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion5">
-        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>Are images stored ?</label>
-        <div class="accordion-item-desc">No, Image Press does not store the images you upload. The compression process takes place locally in your browser without sending the images to a server. Your privacy and the security of your images are prioritized. Once the compression is complete, you can download the compressed image directly to your device without any data being stored on the server.</div>
+        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>是否存储图像？</label>
+        <div class="accordion-item-desc">不，Image Press 不会存储您上传的图像。 压缩过程在浏览器本地进行，无需将图像发送到服务器。 您的隐私和图像的安全是优先考虑的。 压缩完成后，您可以将压缩的图像直接下载到您的设备，而无需在服务器上存储任何数据。</div>
     </div>
 
 </div>
 </section>
 <footer class="footer">
   <div class="copyright">
-      <a href="https://imagepress.online/index.html"><h3  id="logo">imagepress<small>.online</small></h3></a>
+      <a href="https://imagepress.online/zh/index.html"><h3  id="logo">imagepress<small>.online</small></h3></a>
     
-    <p><b>Disclaimer:</b> The information provided on the Image Press website is for general informational purposes only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability concerning the website or the information, products, services, or related graphics contained on the website for any purpose.Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage, including indirect or consequential loss or damage, or any loss or damage whatsoever arising from the use of this website.Through this website, you may be able to link to other websites that are not under the control of Image Press. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
-        <p>&copy; 2024 <a href="https://imagepress.online/">Image Press</a>. All rights reserved.</p>
+    <p><b>免责声明：</b> Image Press 网站上提供的信息仅供一般参考之用。 虽然我们努力保持信息的最新性和准确性，但我们不对网站或信息、产品、服务的完整性、准确性、可靠性、适用性或可用性做出任何形式的明示或暗示的陈述或保证， 或网站上包含的出于任何目的的相关图形。您对此类信息的任何依赖均由您自行承担风险。 在任何情况下，我们均不对任何损失或损害负责，包括间接或后果性损失或损害，或因使用本网站而产生的任何损失或损害。通过本网站，您可以链接到以下网站： 不受 Image Press 的控制。 我们无法控制这些网站的性质、内容和可用性。 包含任何链接并不一定意味着推荐或认可其中表达的观点。</p>
+        <p>&copy; 2024 <a href="https://imagepress.online/zh/">Image Press</a>. 版权所有。</p>
   </div>
 </footer>
 <div class="overlay"></div>
-<script  src="script.js"></script>
+<script  src="http://localhost:8080/script.js"></script>
 </body>
 </html>
