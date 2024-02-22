@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="UTF-8">
+    <meta name="author" content="Image Press" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta property="og:title" content="Image Press">
+    <meta property="og:description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta property="og:image" content="https://imagepress.online/img/android-chrome-384x384.png">
+    <meta property="og:image:alt" content="Image Press" />
+    <meta property="og:url" content="https://imagepress.online/en/">
+    <meta name="og:site_name" content="Image Press">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Press">
+    <meta name="twitter:description" content="Reduce image sizes in kb, enhance your website performance and user experience with Image Press. Compress images for faster loading and improved efficiency today!">
+    <meta name="twitter:image" content="https://imagepress.online/img/android-chrome-384x384.png">
+    <link rel="icon" href="https://imagepress.online/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://imagepress.online/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="https://imagepress.online/img/site.webmanifest">
+    <link rel="mask-icon" href="https://imagepress.online/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://imagepress.online/">
+    <title>Reduce or Compress your images size in kb with Image Press</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+<header class="navbar sticky">
+  <a href="https://imagepress.online/index.html" class="logo">imagepress<small>.online</small></a>
+  <div class="menu-btn">
+    <div class="menu-btn__lines"></div>
+  </div>
+  <ul class="menu-items">
+    <li><a href="index.html" class="menu-item">Home Page</a></li>
+      <li>
+      <a href="#" class="menu-item">Change Language</a>
+      <ul class="dropdown-menu">
+        <li><a href="http://localhost:8080/index.html" class="menu-item">English</a></li>
+        <li><a href="http://localhost:8080/hi/index.html" class="menu-item">हिन्दी</a></li>
+        
+        <li><a href="http://localhost:8080/zh/index.html" class="menu-item">你知道</a></li>
+          <li><a href="http://localhost:8080/fr/index.html" class="menu-item">Français</a></li>
+        <li><a href="http://localhost:8080/es/index.html" class="menu-item">Español</a></li>
+      </ul>
+    </li>               
+    <li><a href="https://imagepress.online/links/privacy policy.html" class="menu-item">Privacy Policy</a></li>
+    <li><a href="https://imagepress.online/links/terms of use.html" class="menu-item">Terms Of Use</a></li>   
+    
+    <li><a href="https://imagepress.online/links/contact us.html" class="menu-item">Contact Us</a></li>
+  </ul>
+</header>
+
+<main>
+    <h1 id="heading">Compress Image In KB</h1>
+  <div class="container">
+            <div id="originalImageContainer">
+                <div id="originalImageLoading" class="loadingSpinner"></div>
+                <h3>Original Image</h3>
+                <img id="originalImage" >
+                <div id="fileSizeOriginal" class="fileSize"></div>
+                <label for="imageInput" class="fileInputLabel">Choose File</label>
+                <input type="file" id="imageInput" accept="image/*" class="fileInput" onchange="displayOriginalPreview()">
+            </div>
+            <br><div class="widthrange">
+                <h5>Reduce or adjust slider keep the quality of image</h5>
+            <label for="maxWidthRange">Max Width:</label>
+<input type="range" id="maxWidthRange" min="100" oninput="updateMaxWidth()">
+<span id="maxWidthValue">0</span>px</div> <br>
+            <label id="fileSizeLabel" for="fileSize">Target File Size (KB): </label><br>
+            <input type="number" id="fileSize" min="1" class="compressionInput" placeholder="Enter target size in KB"><br>
+            <button onclick="compressImageBySize()" class="downloadButton">Compress</button>
+            <div id="fileSize"></div>
+        </section>
+        <div id="compressedImageContainer">
+            <div id="compressedImageLoading" class="loadingSpinner"></div>
+            <h3>Compressed Image</h3>
+            <img id="compressedImage" onload="hideLoadingSpinner('compressedImageLoading')">
+            <div id="fileSizeCompressed" class="fileSize"></div>
+<a id="downloadLink" download="compressed_image.jpg" class="downloadButton">Download</a>
+  </div>
+</main>
+<section title="how to use Image Press" id="howto">
+    <div id="divh">
+    <div id="pdiv1">
+        <h4>Step 1: Upload Your Image</h4>
+        <p> &#11157; Click on the "Choose File" button.<br>
+            &#11157; Select the image you want to compress from your device. </p>      
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/upload-icon.svg" alt="">
+        </div></div>
+        <div id="divh">
+     <div id="pdiv2">
+         <h4>Step 2:Set MaxWidth as per your need </h4>
+            <p> &#11157; Use the "Max Width" slider to set the maximum width for your image.<br>
+                &#11157; This is optional and helps maintain consistent dimensions if needed.
+            </p>
+                </div>
+    <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/noun-slider-1029949.svg" alt="">
+         </div>
+         </div>
+         
+         <div id="divh">
+    <div id="pdiv1">
+        <h4>Step 3: Specify Target File Size</h4>
+            <p>&#11157; Enter your desired target file size (in kilobytes) in the input box.<br>
+                &#11157; This allows you to control the level of compression.
+            </p>
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/input-field-svgrepo-com.svg" alt="">
+        </div></div>
+        
+         <div id="divh">
+     <div id="pdiv2">
+          <h4>Step 4: Click "Compress" Button</h4>
+            <p>&#11157; Press the "Compress" button to start the optimization process.<br>
+                &#11157; The tool will dynamically adjust the image size while preserving quality.
+            </p>
+                </div>
+    <div id="imgdiv2"> <img id="imgh" src="https://imagepress.online/img/click-here.svg" alt="">
+         </div>
+         </div>
+         
+          <div id="divh">
+    <div id="pdiv1">
+             <h4>Step 5: Download the Optimized Image</h4>
+            <p>&#11157; If satisfied, click the "Download" button.<br>
+                &#11157; The compressed image is saved to your device and ready for use. </p>
+        </div>
+       <div id="imgdiv1" > <img id="imgh" src="https://imagepress.online/img/download-to-storage-icon.svg" alt="">
+        </div></div>
+</section>
+<section>
+    <div class="accordion">
+    <h4>Frequently Asked Questions</h1>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion1">
+        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>What is Image Press?</label>
+        <div class="accordion-item-desc">Image Press is a web-based tool designed to reduce the file size of images without significant loss of quality. It helps optimize images for faster loading times on websites, saving bandwidth and improving user experience.</div>
+    </div>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion4">
+        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>How does the compression process work?</label>
+        <div class="accordion-item-desc">The compression process involves resizing and adjusting the quality of the image. When you upload an image, the tool uses canvas and JavaScript to dynamically resize it. The quality is then adjusted to meet a target file size specified by you. The process aims to find an optimal balance between file size reduction and maintaining a visually acceptable image quality.</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion2">
+        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>What is the size limit for images ?</label>
+        <div class="accordion-item-desc">The Image Press doesn't have a fixed size limit for images. However, the tool's effectiveness depends on the image's original size and content. Larger images may be more challenging to compress to extremely small sizes while preserving quality. It's recommended to experiment with different target file sizes to find the right balance for your specific images.</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion3">
+        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>Which image extension can you compress ?</label>
+        <div class="accordion-item-desc">Image Press is designed to handle various image formats, including popular ones like JPEG, PNG, and others. It supports a wide range of image extensions commonly used on the web. You can upload images with different extensions, and the tool will attempt to compress them accordingly.</div>
+    </div>
+
+    
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion5">
+        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>Are images stored ?</label>
+        <div class="accordion-item-desc">No, Image Press does not store the images you upload. The compression process takes place locally in your browser without sending the images to a server. Your privacy and the security of your images are prioritized. Once the compression is complete, you can download the compressed image directly to your device without any data being stored on the server.</div>
+    </div>
+
+</div>
+</section>
+<footer class="footer">
+  <div class="copyright">
+      <a href="https://imagepress.online/index.html"><h3  id="logo">imagepress<small>.online</small></h3></a>
+    
+    <p><b>Disclaimer:</b> The information provided on the Image Press website is for general informational purposes only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability concerning the website or the information, products, services, or related graphics contained on the website for any purpose.Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage, including indirect or consequential loss or damage, or any loss or damage whatsoever arising from the use of this website.Through this website, you may be able to link to other websites that are not under the control of Image Press. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+        <p>&copy; 2024 <a href="https://imagepress.online/">Image Press</a>. All rights reserved.</p>
+  </div>
+</footer>
+<div class="overlay"></div>
+<script  src="script.js"></script>
+</body>
+</html>
